@@ -1,0 +1,93 @@
+<svg viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond -->
+  <rect width="900" height="700" fill="#f8f9fa" />
+  
+  <!-- Titre -->
+  <text x="450" y="40" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle">Architecture du Chatbot RAG</text>
+  
+  <!-- Interface Utilisateur -->
+  <rect x="350" y="70" width="200" height="80" rx="10" fill="#4285f4" />
+  <text x="450" y="100" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Interface Web</text>
+  <text x="450" y="120" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Application Flask</text>
+  <text x="450" y="140" font-family="Arial" font-size="12" fill="white" text-anchor="middle">/chat, /conversations, /feedback</text>
+  
+  <!-- ConversationManager -->
+  <rect x="50" y="250" width="200" height="100" rx="10" fill="#0f9d58" />
+  <text x="150" y="280" font-family="Arial" font-size="16" fill="white" text-anchor="middle">ConversationManager</text>
+  <text x="150" y="300" font-family="Arial" font-size="12" fill="white" text-anchor="middle">- Gestion de l'historique</text>
+  <text x="150" y="320" font-family="Arial" font-size="12" fill="white" text-anchor="middle">- Stockage des conversations</text>
+  <text x="150" y="340" font-family="Arial" font-size="12" fill="white" text-anchor="middle">- Gestion des feedbacks</text>
+  
+  <!-- Embeddings Model -->
+  <rect x="50" y="450" width="200" height="100" rx="10" fill="#db4437" />
+  <text x="150" y="480" font-family="Arial" font-size="16" fill="white" text-anchor="middle">CustomOpenSourceEmbeddings</text>
+  <text x="150" y="500" font-family="Arial" font-size="12" fill="white" text-anchor="middle">- SentenceTransformer</text>
+  <text x="150" y="520" font-family="Arial" font-size="12" fill="white" text-anchor="middle">- Cache et batching</text>
+  <text x="150" y="540" font-family="Arial" font-size="12" fill="white" text-anchor="middle">- Traitement de texte</text>
+  
+  <!-- RAG System -->
+  <rect x="350" y="350" width="200" height="100" rx="10" fill="#f4b400" />
+  <text x="450" y="380" font-family="Arial" font-size="16" fill="white" text-anchor="middle">HybridRAG</text>
+  <text x="450" y="400" font-family="Arial" font-size="12" fill="white" text-anchor="middle">- Classification de requêtes</text>
+  <text x="450" y="420" font-family="Arial" font-size="12" fill="white" text-anchor="middle">- Recherche multi-sources</text>
+  <text x="450" y="440" font-family="Arial" font-size="12" fill="white" text-anchor="middle">- Formatage du contexte</text>
+  
+  <!-- Vector Stores -->
+  <rect x="350" y="550" width="200" height="100" rx="10" fill="#673ab7" />
+  <text x="450" y="580" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Vector Stores</text>
+  <text x="450" y="600" font-family="Arial" font-size="12" fill="white" text-anchor="middle">- Documentation</text>
+  <text x="450" y="620" font-family="Arial" font-size="12" fill="white" text-anchor="middle">- FAQs</text>
+  <text x="450" y="640" font-family="Arial" font-size="12" fill="white" text-anchor="middle">- Troubleshooting</text>
+  
+  <!-- Self Reflection -->
+  <rect x="650" y="250" width="200" height="100" rx="10" fill="#ff6d01" />
+  <text x="750" y="280" font-family="Arial" font-size="16" fill="white" text-anchor="middle">SelfReflection</text>
+  <text x="750" y="300" font-family="Arial" font-size="12" fill="white" text-anchor="middle">- Évaluation des réponses</text>
+  <text x="750" y="320" font-family="Arial" font-size="12" fill="white" text-anchor="middle">- Détection de confiance</text>
+  <text x="750" y="340" font-family="Arial" font-size="12" fill="white" text-anchor="middle">- Amélioration des réponses</text>
+  
+  <!-- LLM API -->
+  <rect x="650" y="450" width="200" height="100" rx="10" fill="#34a853" />
+  <text x="750" y="480" font-family="Arial" font-size="16" fill="white" text-anchor="middle">LLM API</text>
+  <text x="750" y="500" font-family="Arial" font-size="12" fill="white" text-anchor="middle">- OpenRouter API</text>
+  <text x="750" y="520" font-family="Arial" font-size="12" fill="white" text-anchor="middle">- Génération de réponses</text>
+  <text x="750" y="540" font-family="Arial" font-size="12" fill="white" text-anchor="middle">- Modèles Mistral</text>
+  
+  <!-- Flèches -->
+  <!-- Interface > Conversation Manager -->
+  <path d="M350 130 L200 250" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+  
+  <!-- Interface > RAG -->
+  <path d="M450 150 L450 350" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+  
+  <!-- Interface > SelfReflection -->
+  <path d="M550 130 L700 250" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+  
+  <!-- RAG > Embeddings -->
+  <path d="M350 400 L250 450" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+  
+  <!-- RAG > Vector Stores -->
+  <path d="M450 450 L450 550" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+  
+  <!-- Embeddings > Vector Stores -->
+  <path d="M250 500 L350 580" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+  
+  <!-- RAG > LLM -->
+  <path d="M550 400 L650 480" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+  
+  <!-- LLM > SelfReflection -->
+  <path d="M700 450 L700 350" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+  
+  <!-- SelfReflection > Interface -->
+  <path d="M750 250 L550 110" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+  
+  <!-- Définition des flèches -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+  
+  <!-- Légende flux de données -->
+  <text x="450" y="680" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Flow de données: Question → Recherche → LLM → Vérification → Réponse</text>
+</svg>
